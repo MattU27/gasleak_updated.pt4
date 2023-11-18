@@ -1,0 +1,4 @@
+[[redirects]]
+  from = "/*"
+  to = "/gasleak_updated.pt4"
+  status = 200

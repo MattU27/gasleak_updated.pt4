@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <title>Admin Dashboard | GasLeak</title>
+  <link rel="icon" type="image/x-icon" href="Minimalist Geometric Technology Computer Logo.png">>
+
+  <link rel="stylesheet" href="admin.css" />
+  <!-- Fontawesome CDN Link -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Racing+Sans+One&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <nav class="admin-sidebar">
+    <a href="#" class="logo">GASLEAK ADMIN</a>
+    <div class="menu-content">
+      <ul class="menu-items">
+        <!-- Replace the static links with dynamic data from the server -->
+        <li class="item">
+            <a href="#">Dashboard</a>
+          </li>
+          <button class="sidebar-button" onclick="location.pathname='GasLeakHome/Home.html'">VIEW THE HOME</button>
+        <!-- New Admin Dashboard link -->
+      </ul>
+    </div>
+  </nav>
+  <nav class="admin-navbar">
+    <div class="menu-title">WELCOME BACK ADMIN</div>
+  </nav>
+ <main class="admin-main">
+        <!-- Admin Dashboard Content Goes Here -->
+        <hr>
+        <div class="Gas-form">
+          <form id="GasForm" autocomplete="off">
+              <div class="form-group">
+                  <label for="cities">Cities</label>
+                  <input type="text" name="cities" id="cities" required>
+                  <label class="validation-error hide" id="citiesValidationError">
+              </div>
+              <div class="form-group">
+                  <label for="gasstation">Gas Station</label>
+                  <input type="text" name="gasstation" id="gasstation">
+              </div>
+              <div class="form-group">
+                  <label for="gasoline">Gasoline Type</label>
+                  <input type="text" name="gasoline" id="gasoline">
+              </div>
+              <div class="form-group">
+                  <label for="price">Price</label>
+                  <input type="text" name="price" id="price">
+              </div>
+              <div class="form-action-buttons">
+                  <input type="submit" value="Submit">
+              </div>
+          </form>
+      </div>
+        <br/>
+
+        <!-- Gas Table Goes Here -->
+        <div class="Gas-table">
+            <table class="list" id="GasList">
+                <thead>
+                    <tr>
+                        <th>Cities</th>
+                        <th>Gas Station</th>
+                        <th>Gasoline Type</th>
+                        <th>Price</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="GasTableBody"></tbody>
+            </table>
+        </div>
+    </main>
+
+    <script src="controller.js"></script>
+    <script src="admin.js"></script>
+    
+</body>
+</html>

@@ -1,0 +1,209 @@
+/* Reset some default styles */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Racing+Sans+One&family=Saira+Semi+Condensed:wght@300&display=swap');
+body, h1, h2, h3, p, ul, li {
+  margin: 0; /* Reset margin */
+  padding: 0; /* Reset padding */
+}
+
+body {
+  font-family: 'Poppins', sans-serif; /* Set default font family */
+  background-color: #f4f4f4; /* Set default background color */
+  
+}
+
+/* Admin Sidebar */
+.admin-sidebar {
+  width: 200px; /* Set sidebar width */
+  height: 100%;
+  background: #11101d; /* Set sidebar background color */
+  color: #fff; /* Set text color in the sidebar */
+  position: fixed;
+  top: 0;
+  left: 0;
+  overflow-x: hidden;
+  padding-top: 30px;
+  font-size: 40px;
+}
+
+
+.admin-sidebar a {
+  padding: 10px; /* Set padding for sidebar links */
+  text-decoration: none;
+  color: #fff; /* Set link text color */
+  display: block;
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+
+.menu-content {
+  padding-top: 20px;
+  
+}
+
+.menu-items {
+  list-style: none;
+}
+
+.menu-title {
+  font-size: 50px;
+  font-weight: bold;
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+  margin-left: 70px;
+  font-family: 'Racing Sans One', sans-serif;
+}
+
+.menu-items li {
+  margin-top: 20px;
+  padding: 5px;
+}
+
+/* Admin Navbar */
+.admin-navbar {
+  background-color: none; /* Set initial background color for the navbar */
+  color: #333;
+  padding: 0;
+  text-align: center;
+  z-index: 1000;
+  transition: background-color 0.3s ease;
+  
+}
+
+/* Add a class for the fixed state */
+.admin-navbar.fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: #fff; /* Set the background color when fixed */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .menu-title {
+    font-size: 20px; /* Adjust menu title font size for smaller screens */
+  }
+}
+
+/* Admin Main Content */
+.admin-main {
+  margin-left: 200px; /* Adjust for sidebar width */
+  padding: 20px;
+}
+
+hr {
+  border: 1px solid #f4f4f4;
+  margin-bottom: 20px;
+}
+
+/* Gas Form */
+.Gas-form {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.validation-error {
+  color: red;
+  margin-top: 5px;
+}
+
+.form-action-buttons {
+  margin-top: 20px;
+}
+
+input[type="submit"] {
+  background-color: rgb(50, 126, 50);
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-family: 'Poppins', sans-serif;
+}
+
+input[type="submit"]:hover {
+  background-color: rgb(28, 78, 28);
+}
+
+/* Gas Table */
+.Gas-table {
+  margin-top: 30px;
+}
+
+.list {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: left;
+}
+
+th {
+  background: #4070f4;
+  color: #fff;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .admin-sidebar {
+      width: 100%;
+      position: relative;
+  }
+
+  .admin-main {
+      margin-left: 0;
+  }
+}
+
+/* Button for toggling the sidebar on smaller screens */
+.sidebar-button {
+  position: absolute;
+  bottom: 50px; /* Adjust the distance from the bottom as needed */
+  left: 15px; /* Adjust the distance from the left as needed */
+  background-color: #3498db;
+  color: white;
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Hover effect for the sidebar button */
+.sidebar-button:hover {
+  background-color: #2980b9;
+}
+
+/* Highlight error input with a red border */
+.error-input {
+  border: 1px solid red;
+}
+
+

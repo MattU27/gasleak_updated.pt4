@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Racing+Sans+One&family=Saira+Semi+Condensed:wght@300&display=swap');
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f4f8fa;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+    float: left;
+    margin-left: 700px;
+    
+}
+
+.logo {
+    width: 100px; /* Adjust the width as needed */
+    height: auto; /* Maintain the aspect ratio */
+}
+
+
+/* Add this to adjust the header layout */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    background: #4169E1;
+    color: #fff;
+    border: 2px solid #000000;
+}
+
+.container {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    margin: 20px;
+}
+
+.form-container {
+    flex: 1;
+    max-width: 400px;
+    max-height: 600px;
+    padding: 40px;
+    background-color: #f4f8fa;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: 2px solid #61a5c2;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 5px;
+    color: #333;
+    font-family: 'Poppins', sans-serif;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #61a5c2;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 14px;
+}
+
+.validation-error {
+    color: red;
+    margin-top: 5px;
+    display: none;
+}
+
+.form-action-buttons {
+    text-align: right;
+    margin-top: 10px;
+}
+
+input[type=submit],
+button {
+    width: 100%;
+    background-color: rgb(34, 129, 37);
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-family: 'Poppins', sans-serif;
+}
+
+input[type=submit]:hover,
+button:hover {
+    background-color: #224423;
+}
+
+.table-container {
+    flex: 1;
+    margin-left: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+}
+
+th {
+    background-color: #11101d;
+    color: white;
+}
+
+button {
+    background-color: rgb(52, 110, 219);
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-family: 'Poppins', sans-serif;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #154361;
+}
+
+/* CSS for Edit and Delete Links */
+a.edit-link, a.delete-link {
+    display: inline-block;
+    padding: 5px 10px;
+    margin-right: 5px;
+    text-decoration: none;
+    color: #3498db; /* Blue color */
+    border: 1px solid #3498db;
+    border-radius: 3px;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+a.edit-link:hover, a.delete-link:hover {
+    background-color: #2980b9; /* Darker blue color on hover */
+    color: #fff;
+    border-color: #2980b9;
+}
+

@@ -1,0 +1,328 @@
+/* Importing fonts from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Racing+Sans+One&family=Saira+Semi+Condensed:wght@300&display=swap');
+
+/* Resetting default margin, padding, and box-sizing for all elements */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif; /* Setting the default font */
+}
+
+/* Sidebar styling */
+.sidebar {
+  position: fixed;
+  top: 0; /* Adjust to position from the top of the viewport */
+  height: 100%;
+  width: 260px;
+  background: #11101d;
+  padding: 15px;
+  z-index: 99;
+}
+/* Styling for the sidebar logo */
+.logo {
+  font-size: 40px;
+  padding: 0 15px;
+  color: #fff;
+  text-decoration: none;
+  font-family: 'Racing Sans One', sans-serif;
+}
+
+/* Styling for the body background */
+body {
+  background-image: url(wpageBG.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+/* Styling for the menu content in the sidebar */
+.menu-content {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  margin-top: 40px;
+  overflow-y: scroll;
+}
+
+/* Hiding the scrollbar for the menu content */
+.menu-content::-webkit-scrollbar {
+  display: none;
+}
+
+/* Styling for the menu items */
+.menu-items {
+  height: 100%;
+  width: 100%;
+  list-style: none;
+  transition: all 0.4s ease;
+}
+
+/* Styling for the submenu when active */
+.submenu-active .menu-items {
+  transform: translateX(-56%);
+}
+
+/* Styling for the menu title */
+.menu-title {
+  color: #fff;
+  font-size: 14px;
+  padding: 15px 20px;
+}
+
+/* Styling for menu items and submenu items */
+.item a,
+.submenu-item {
+  padding: 16px;
+  display: inline-block;
+  width: 100%;
+  border-radius: 12px;
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Styling for icons in menu items */
+.item i {
+  font-size: 12px;
+}
+
+/* Styling for hover effect on menu items and submenu items */
+.item a:hover,
+.submenu-item:hover,
+.submenu .menu-title:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* Styling for submenu items */
+.submenu-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+
+/* Styling for the submenu */
+.submenu {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  right: calc(-100% - 26px);
+  height: calc(100% + 100vh);
+  background: #11101d;
+  display: none;
+}
+
+/* Showing the submenu when it has the class "show-submenu" */
+.show-submenu ~ .submenu {
+  display: block;
+}
+
+/* Styling for the submenu title */
+.submenu .menu-title {
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+/* Styling for icons in the submenu title */
+.submenu .menu-title i {
+  margin-right: 10px;
+}
+
+/* Styling for the navbar and main content */
+.navbar,
+.main {
+  left: 260px;
+  width: calc(100% - 260px);
+  transition: all 0.5s ease;
+  z-index: 1000;
+}
+
+/* Styling for the closed sidebar */
+.sidebar.close ~ .navbar,
+.sidebar.close ~ .main {
+  left: 0;
+  width: 100%;
+  
+}
+
+/* Transition effect for the sidebar */
+.sidebar {
+  transition: transform 0.3s ease;
+   position: fixed;
+}
+
+/* Hiding the sidebar when it has the class "close" */
+.sidebar.close {
+  transform: translateX(-300px);
+}
+
+/* Styling for the navbar */
+.navbar {
+  position: fixed;
+  color: #fff;
+  padding: 15px 20px;
+  font-size: 25px;
+  background: #4070f4;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Styling for the navbar content */
+.navbar-content {
+  display: flex;
+  align-items: center;
+}
+
+/* Styling for the navbar heading */
+.navbar h1 {
+  text-align: center;
+  margin-bottom: 1px;
+  margin-right: 290px; /* Adjust this value */
+  font-size: 25px;
+}
+
+/* When the sidebar is closed */
+.sidebar.close ~ .navbar h1 {
+  margin-right: 560px; /* Adjust this to move the h1 when sidebar closes */
+}
+
+/* Styling for the close icon in the navbar */
+.navbar #sidebar-close {
+  cursor: pointer;
+}
+
+/* Styling for the main content */
+.main {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column; /* Change to column to stack elements vertically */
+  height: 100vh;
+  z-index: 100;
+  background-image: url(webBG.png);
+}
+
+/* Styling for the main heading */
+
+.main h1 {
+  color: #000;
+  font-size: 38px;
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-weight: bold;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Styling for the gas content */
+.gas-content {
+    overflow: auto; /* or overflow: visible; */
+  padding-top: 10%;
+  padding-left: 100px;
+}
+
+/* Styling for the gas content table */
+.gas-content table {
+  max-width: 100%;
+  overflow-x: auto; /* Add horizontal scrollbar if the table overflows */
+  border-collapse: collapse;
+  width: 100%;
+  color: #2980b9;
+  font-family: monospace;
+  font-size: 18px;
+  text-align: left;
+}
+
+/* Styling for the gas content table header */
+.gas-content th {
+  background-color: #2980b9;
+  color: white;
+}
+
+/* Styling for even rows in the gas content table */
+.gas-content tr:nth-child(even) {
+  background-color: #E7F2FD;
+}
+
+/* Styling for the gas content table header and cells */
+.gas-content th,
+.gas-content table th {
+  padding: 8px;
+}
+.gas-content td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+  
+}
+
+/* Styling for the overall container of city tables */
+#cityTablesContainer {
+  display: flex;
+  flex-wrap: wrap;
+  position: relative; /* or position: static; */
+  z-index: 1; /* Adjust the value as needed */
+  max-width: 100%; /* Adjust as needed */
+}
+
+/* Styling for each city table wrapper */
+.city-table-wrapper {
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* Styling for each city table */
+.city-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+/* Styling for the table header in city tables */
+.city-table th {
+  background-color: #f2f2f2;
+}
+
+
+
+/* Styling for table cells in city tables */
+.city-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+/* Styling for the heading of each city table */
+.city-table-wrapper h2 {
+  margin-bottom: 8px;
+}
+
+/* Add this CSS to your existing styles */
+.sidebar-button {
+  position: absolute;
+  bottom: 15px; /* Adjust the distance from the bottom as needed */
+  left: 15px; /* Adjust the distance from the left as needed */
+  background-color: #3498db;
+  color: white;
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+/* Hover effect for the sidebar button */
+.sidebar-button:hover {
+  background-color: #2980b9;
+}
+
+
+
+

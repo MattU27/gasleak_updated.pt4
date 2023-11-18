@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Home | GasLeak</title>
+  <link rel="icon" type="image/x-icon" href="home_png.png">
+  <link rel="stylesheet" href="style.css" />
+  <!-- Fontawesome CDN Link -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Racing+Sans+One&display=swap" rel="stylesheet">
+  </head>
+<body>
+  <nav class="sidebar">
+    <a href="#" class="logo">GASLEAK</a>
+    <div class="menu-content">
+      <ul class="menu-items">
+        <div class="menu-title">WELCOME!</div>
+        <li class="item">
+          <a href="Home.html">Home</a>
+        </li>
+        <li class="item">
+          <a href="FAQ.html">FAQ</a>
+        </li>
+        <li class="item">
+          <a href="aboutUs.html">About Us</a>
+        </li>
+        <li class="item">
+          <a href="contactUs.html">Contact Us</a>
+        </li>
+      </ul>
+    </div>
+    <!-- Add this button inside the sidebar, just before the closing </nav> tag -->
+    <button class="sidebar-button" onclick="location.pathname='GasLeakAdminRegisterLogin/build/AdminLogin.html'">LOG IN AS ADMIN</button>
+  </nav>
+  
+  <nav class="navbar">
+    <i class="fa-solid fa-bars" id="sidebar-close"></i>
+    <h1> Presenting the latest gas prices variation in the National Capital Region (NCR)</h1>
+  </nav>
+
+  <main class="main">
+    <div class="gas-content">
+      <div id="cityTablesContainer"></div>
+    </div>
+  </main>
+  
+  <script src="normal.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Register | GasLeak</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="Minimalist Geometric Technology Computer Logo.png">
+</head>
+
+<body>
+
+    <header>
+        <div class="navbar">
+            <img src="Minimalist Geometric Technology Computer Logo.png" alt="Minimalist Geometric Technology Computer Logo" class="logo">
+        </div>
+        <h1 class="title">ADMIN REGISTER</h1>
+        <hr>
+    </header>
+
+    <div class="container">
+        <div class="form-container">
+            <form onsubmit="event.preventDefault();onFormSubmit();" autocomplete="off">
+                <div class="form-group">
+                    <label for="fullName">Full Name</label>
+                    <input type="text" name="fullName" id="fullName" required>
+                    <span class="validation-error" id="fullNameValidationError">This field is required.</span>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email Id</label>
+                    <input type="text" name="email" id="email">
+                </div>
+                <div class="form-group">
+                    <label for="adminId">Admin Id</label>
+                    <input type="text" name="adminId" id="adminId">
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="text" name="password" id="password">
+                </div>   
+                <div class="form-action-buttons">
+                    <input type="submit" value="Submit">
+                </div>
+            </form>
+
+            <!-- Button for going back to login -->
+            <button onclick="goToLogin()">Go Back to Login</button>
+        </div>
+        <br>
+        <div class="table-container">
+            <table class="list" id="employeeList">
+                <thead>
+                    <tr>
+                        <th>Full Name</th>
+                        <th>Email Id</th>
+                        <th>Admin Id</th>
+                        <th>Password</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Table content goes here -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+
+    <!-- Script for handling the button click and redirecting to login page -->
+    <script>
+        function goToLogin() {
+            window.location.href = "AdminLogin.html"; // Replace 'AdminLogin.html' with your actual login page
+        }
+    </script>
+</body>
+
+</html>

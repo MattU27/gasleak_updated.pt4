@@ -1,0 +1,16 @@
+{
+  "name": "gasleak_updated.pt4",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+    ,"start-all": "npm-run-all --parallel start-folder1 start-folder2 start-folder3",
+    "start-folder1": "cd C:\\xampp\\htdocs\\gasleak_updated.pt4\\GasLeakAdmin && npm start",
+    "start-folder2": "cd C:\\xampp\\htdocs\\gasleak_updated.pt4\\GasLeakNormal && npm start",
+    "start-folder3": "cd C:\\xampp\\htdocs\\gasleak_updated.pt4\\MySQL && npm start"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

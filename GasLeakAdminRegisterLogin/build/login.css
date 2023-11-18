@@ -1,0 +1,378 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+
+*{
+
+    margin: 0;
+
+    padding: 0;
+
+    box-sizing: border-box;
+
+    font-family: 'Poppins', sans-serif;
+
+}
+body{
+
+    height: 100%;
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    background-size: cover;
+    backdrop-filter: blur(5px);
+    background-color: black;
+    align-items: center;
+    justify-content: center;
+    background-image: url(loginbackground.jpg);
+}
+
+.container
+{
+    position: relative;
+    margin-top: 1%;
+    max-width: 430px;
+    width: 100%;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+ 
+.container .forms{
+
+    display: flex;
+
+    align-items: center;
+
+    height: 600px;
+
+    width: 200%;
+
+    transition: height 0.2s ease;
+
+}
+
+
+.container .forms img {
+
+    padding: 5px;
+    margin-top: -20%;
+    margin-bottom: -15%;
+    margin-left: 13.3%;
+
+    width: 75%;
+
+    height: 300px;
+
+}
+
+
+.container .form{
+
+    width: 50%;
+
+    padding: 30px;
+
+    background-color: #ffffff;
+
+    transition: margin-left 0.18s ease;
+
+}
+
+
+.container.active .login{
+
+    margin-left: -50%;
+
+    opacity: 0;
+
+    transition: margin-left 0.18s ease, opacity 0.15s ease;
+
+}
+
+
+.container .signup{
+
+    opacity: 0;
+
+    transition: opacity 0.09s ease;
+
+}
+
+.container.active .signup{
+
+    opacity: 1;
+
+    transition: opacity 0.2s ease;
+
+}
+
+
+.container.active .forms{
+
+    height: 600px;
+
+}
+
+.container .form .title{
+
+    position: relative;
+
+    font-size: 25px;
+
+    font-weight: 700;
+
+    margin-top: 15%;
+    margin-left: 32.5%;
+
+}
+
+ 
+
+.container .form .title1{
+
+    position: relative;
+
+    font-size: 27px;
+
+    font-weight: 600;
+
+    margin-left: 30%;
+
+}
+
+.form .title::before{
+
+    content: '';
+
+    position: absolute;
+
+    left: 0;
+
+    bottom: 0;
+
+    height: 3px;
+
+    width: 75px;
+
+    border-radius: 25px;
+
+}
+
+
+.form .title1::before{
+
+    content: '';
+
+    position: absolute;
+
+    left: 0;
+
+    bottom: 0;
+
+    height: 3px;
+
+    width: 165px;
+
+    border-radius: 25px;
+
+}
+
+.form .input-field{
+
+    position: relative;
+
+    height: 50px;
+
+    width: 100%;
+
+    margin-top: 30px;
+
+}
+
+
+.input-field input{
+
+    position: absolute;
+
+    height: 100%;
+
+    width: 100%;
+
+    padding: 0 35px;
+
+    border: none;
+
+    outline: none;
+
+    font-size: 16px;
+
+    border-bottom: 2px solid #ccc;
+
+    border-top: 2px solid transparent;
+
+    transition: all 0.2s ease;
+
+}
+
+.input-field input:is(:focus, :valid){
+
+    border-bottom-color: #10069e;
+
+}
+
+
+.input-field i{
+
+    position: absolute;
+
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    color: #999;
+
+    font-size: 23px;
+
+    transition: all 0.2s ease;
+
+}
+
+
+.input-field input:is(:focus, :valid) ~ i{
+
+    color: #10069e;
+
+}
+
+
+.input-field i.icon{
+
+    left: 0;
+
+}
+
+.input-field i.showHidePw{
+
+    right: 0;
+
+    cursor: pointer;
+
+    padding: 10px;
+
+}
+
+.form .checkbox-text{
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    margin-top: 20px;
+
+}
+ 
+
+.checkbox-text .checkbox-content{
+
+    display: flex;
+
+    align-items: center;
+
+}
+
+.checkbox-content input{
+
+    margin-right: 10px;
+
+    accent-color: #10069e;
+
+}
+
+.form .text{
+
+    color: #333;
+
+    font-size: 14px;
+
+}
+
+.form a.text1{
+
+    color: #10069e;
+
+    text-decoration: none;
+
+}
+
+.form a.text{
+
+  color: #10069e;
+
+  text-decoration: none;
+
+}
+
+.form a:hover{
+
+    text-decoration: underline;
+
+}
+
+.form .button{
+
+    margin-top: 35px;
+
+}
+
+.form .button input{
+
+    border: none;
+
+    color: #fff;
+
+    font-size: 17px;
+
+    font-weight: 500;
+
+    letter-spacing: 1px;
+
+    border-radius: 6px;
+
+    background: linear-gradient(90deg, rgba(7,6,28,1) 0%, rgba(97,101,140,1) 51%, rgba(26,61,94,1) 100%);
+
+    cursor: pointer;
+
+    transition: all 0.3s ease;
+
+}
+
+.button input:hover{
+
+    color:#333;
+
+}
+
+.form .login-signup{
+
+    margin-top: 30px;
+
+    text-align: center;
+
+    display: none;
+
+}
+
+.center-image {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+.center-image img {
+    width: 400px; /* Adjust the width as needed */
+    height: auto; /* Maintain aspect ratio */
+}

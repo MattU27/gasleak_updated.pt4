@@ -1,4 +1,4 @@
 [[redirects]]
-from = "/*"
-to ="/Home.html"
-status = 200
+  from = "/*"
+  to = "/gasleak_updated.pt4"
+  status = 200
